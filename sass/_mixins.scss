@@ -1,0 +1,7 @@
+@mixin content {
+  flex: 1 0 32%;
+  border: 1px solid #d0d9d4;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: var(--color-background-text);
+}
