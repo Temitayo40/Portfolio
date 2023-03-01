@@ -11,13 +11,22 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.span {
-  padding: 0.8rem;
-  font-size: 1.2rem;
+.grey {
   background-color: var(--color-background-text);
+  padding: 0.8rem;
+}
+.white {
+  background-color: var(--color-default);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
   border-radius: 0.3rem;
+}
+.span {
+  font-size: 1.2rem;
+
   // margin-right: 3rem;
 }
 
@@ -27,11 +36,11 @@
   text-transform: capitalize;
   padding: 1rem;
   margin-top: 1rem;
-  // display: inline-block;
+  display: inline-block;
   border: 0.4rem;
-  width: fit-content;
   border-radius: 4px;
   transition: all 0.2s;
+  // backface-visibility: hidden;
 }
 
 .btn:hover {
@@ -69,4 +78,10 @@
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #344563;
 }
