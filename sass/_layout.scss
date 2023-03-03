@@ -1,3 +1,10 @@
+.section {
+  &:not(:first-child) {
+    margin-top: 10rem;
+  }
+  transition: transform 0.8s;
+}
+
 .project-section {
   display: flex;
   flex-direction: column;

@@ -185,6 +185,11 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     margin-bottom: 5rem; }
 
+.section {
+  transition: transform 0.8s; }
+  .section:not(:first-child) {
+    margin-top: 10rem; }
+
 .project-section {
   display: flex;
   flex-direction: column;
@@ -345,8 +350,12 @@ body {
     transform: translate(0); } }
 
 .sticky {
-  background-color: rgba(54, 179, 127, 0.8);
+  background-color: rgba(54, 179, 127, 0.9);
   opacity: 0.8; }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem); }
 
 .margin-bottom-small {
   margin-bottom: 2.4rem; }
