@@ -63,7 +63,7 @@ body {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    margin-top: 2rem;
+    padding: 2rem 0;
     z-index: 100; }
     .header__nav--items {
       list-style: none;
@@ -343,6 +343,10 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+.sticky {
+  background-color: rgba(54, 179, 127, 0.8);
+  opacity: 0.8; }
 
 .margin-bottom-small {
   margin-bottom: 2.4rem; }
