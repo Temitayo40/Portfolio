@@ -2,6 +2,134 @@
   display: flex;
   flex-direction: column;
   padding: 4rem 0.8rem;
-  margin: 0 auto 9rem auto;
+  margin: 0 auto 2rem auto;
   width: 90%;
+}
+
+.contact__section {
+  // position: relative;
+  width: 100%;
+
+  .contactme {
+    width: 90%;
+    margin: 0 auto 6rem auto;
+    display: flex;
+    gap: 2rem;
+
+    &__texts {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-text);
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &_fields {
+      flex: 0 0 58%;
+    }
+
+    .input-group {
+      margin-bottom: 2.4rem;
+      position: relative;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1.5rem;
+      outline: none;
+      border: 1px solid #d0d9d4;
+      font-size: 1.5rem;
+      border-radius: 4px;
+
+      ::placeholder {
+        color: #6b778c;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 3px solid var(--color-primary);
+      }
+
+      &:focus:invalid {
+        border-bottom: 3px solid red;
+      }
+
+      // color: #fff;
+    }
+
+    label {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: text;
+      padding: 1rem;
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-bottom: 3px solid transparent;
+      transition: 0.6s;
+      color: #6b778c;
+
+      // justify-content: center;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label,
+    textarea:focus ~ label {
+      top: -3.5rem;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .input-group {
+        flex-basis: 48%;
+      }
+    }
+  }
+
+  .background {
+    &__image {
+      position: relative;
+      z-index: -10;
+
+      &--1 {
+        position: absolute;
+        left: 0;
+        top: -20rem;
+      }
+      &--2 {
+        position: absolute;
+        left: 25%;
+      }
+      &--3 {
+        position: absolute;
+        right: 0;
+        top: -35rem;
+      }
+    }
+
+    &--icons {
+      position: relative;
+      display: flex;
+    }
+  }
+}
+
+////////////////
+///
+///
+.footer__icons {
+  margin-top: 20rem;
+  margin-bottom: 0;
+  border-top: 1px solid #dfe1e6;
+  padding-top: 1rem;
 }

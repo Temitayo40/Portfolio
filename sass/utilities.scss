@@ -5,6 +5,17 @@
 .center {
   align-items: center;
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.right {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.top {
+  margin-top: -7.5rem;
 }
 
 .span-items {
@@ -29,55 +40,61 @@
 
   // margin-right: 3rem;
 }
+.btn {
+  position: relative;
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    // backface-visibility: hidden;
+  }
 
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 1rem;
-  margin-top: 1rem;
-  display: inline-block;
-  border: 0.4rem;
-  border-radius: 4px;
-  transition: all 0.2s;
-  // backface-visibility: hidden;
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
 
-.btn--green {
-  background-color: var(--color-primary);
-  color: var(--color-default);
-}
+  &--green {
+    background-color: var(--color-primary);
+    color: var(--color-default);
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 4px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
+    &::after {
+      background-color: var(--color-primary);
+    }
+  }
 
-.btn--green::after {
-  background-color: var(--color-primary);
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transition: all 0.4s;
+  }
 }
 
 h3 {
