@@ -1,8 +1,12 @@
+#section--2 {
+  border: 2px solid red;
+}
+
 .section {
-  &:not(:first-child) {
-    margin-top: 10rem;
-  }
-  transition: transform 0.8s;
+  // &:not(:first-child) {
+  //   margin-top: 10rem;
+  // }
+  transition: all 0.8s;
 }
 
 .project-section {

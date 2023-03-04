@@ -12,19 +12,24 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>trillo &mdash; Your all-in-one booking app</title>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
   </head>
   <body>
     <header class="header">
       <div class="header__nav">
         <ul class="header__nav--items">
           <li class="header__nav--item">
-            <a href="#" class="header__nav--link">Portfolio</a>
+            <a href="#section--1" class="header__nav--link">Portfolio</a>
           </li>
           <li class="header__nav--item">
-            <a href="#" class="header__nav--link">About</a>
+            <a href="#section--2" class="header__nav--link">About</a>
           </li>
           <li class="header__nav--item">
-            <a href="#" class="header__nav--link">Contact</a>
+            <a href="#section--3" class="header__nav--link">Contact</a>
           </li>
         </ul>
       </div>
@@ -78,8 +83,8 @@
       </div>
     </header>
     <main>
-      <section class="section">
-        <div class="project-section" id="section--1">
+      <section class="section" id="section--1">
+        <div class="project-section">
           <h2 class="heading__secondary center">My recent Projects</h2>
 
           <div class="projects">
@@ -165,7 +170,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="section--2">
         <div class="aboutme-section">
           <div class="illustration">
             <img
@@ -245,7 +250,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="section--3">
         <div class="contact__section">
           <div class="contactme">
             <h3 class="contactme__texts">
@@ -333,7 +338,7 @@
         </div>
       </section>
 
-      <div class="footer__icons">
+      <div class="footer__icons" id="section--4">
         <div class="header__icons">
           <div class="header__icons-box">
             <svg class="header__icons-svg">
@@ -359,6 +364,60 @@
             <svg class="header__icons-svg">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="poppup">
+        <div class="poppup__content">
+          <div class="poppup__content__icon">
+            <svg class="header__icons-svg">
+              <use xlink:href="img/sprite.svg#icon-github"></use>
+            </svg>
+          </div>
+          <div class="poppup__content__image">
+            <img src="./img/snapshot.png" alt="poppup snapshot" class="img" />
+          </div>
+          <div class="poppup__content__texts">
+            <div class="contents">
+              <div class="text">
+                <h3>Keeping track of hundreds of components</h3>
+                <div>
+                  <a href="" class="btn btn--green mls">
+                    See live
+                    <div class="header__icons-box flex">
+                      <svg class="header__icons-svg">
+                        <use xlink:href="img/sprite.svg#icon-mail"></use>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="" class="btn btn--green mls">
+                    See live
+                    <div class="header__icons-box flex">
+                      <svg class="header__icons-svg">
+                        <use xlink:href="img/sprite.svg#icon-mail"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="span-elements">
+                <span class="span grey2">Html</span>
+                <span class="span grey2">Html</span>
+                <span class="span grey2">Html</span>
+                <span class="span grey2">Html</span>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it 1960s with the releaLorem Ipsum is
+                simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it 1960s with the relea
+              </p>
+            </div>
           </div>
         </div>
       </div>

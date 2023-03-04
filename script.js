@@ -35,9 +35,31 @@ const revealSection = function (entries) {
 };
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15,
+  threshold: 0.1,
 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
+});
+
+// smooth scrolling
+
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    console.log(href);
+
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEL = document.querySelector(href);
+      sectionEL.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });

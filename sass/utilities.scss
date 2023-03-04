@@ -38,17 +38,35 @@
   background-color: var(--color-background-text);
   padding: 0.8rem;
 }
+.grey2 {
+  background-color: var(--color-background-text);
+  padding: 0.8rem 1.2rem;
+}
+
 .white {
   background-color: var(--color-default);
   border-radius: 0.8rem;
   padding: 1.2rem;
   border-radius: 0.3rem;
+  fill: #fff;
 }
 .span {
   font-size: 1.2rem;
 
   // margin-right: 3rem;
 }
+
+.ml {
+  margin-left: auto;
+}
+
+.flex {
+  display: inline-flex;
+  margin-left: 1rem;
+  fill: #fff;
+  // background-color: #fff;
+}
+
 .btn {
   position: relative;
   &,
@@ -58,7 +76,7 @@
     text-transform: capitalize;
     padding: 1rem;
     margin-top: 1rem;
-    display: inline-block;
+    display: inline-flex;
     border-radius: 0.4rem;
     transition: all 0.2s;
     cursor: pointer;
