@@ -8,17 +8,21 @@
   position: relative;
 
   &__nav {
-    background-color: transparent;
+    // background-color: red;
     position: fixed;
     width: 100%;
     padding: 1rem 0;
-    z-index: 100;
+    z-index: 1000;
+    display: block;
 
     &--items {
       list-style: none;
       display: flex;
       gap: 5px;
       justify-content: center;
+
+      // margin-left: 0 auto;
+      // align-self: center;
     }
 
     &--item {
@@ -33,6 +37,10 @@
       text-decoration: none;
       color: #0c1627;
     }
+
+    .icon-mobile-nav[name="close"] {
+      display: none;
+    }
   }
   .img {
     position: relative;
@@ -46,7 +54,8 @@
 
   &__textcontent {
     text-align: center;
-    width: 57%;
+    // max-width: 62%;
+    max-width: 57%;
     position: absolute;
     top: 25%;
     left: 50%;

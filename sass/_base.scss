@@ -49,6 +49,7 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10p
+  overflow-x: hidden;
   // scroll-behavior: smooth;
 }
 

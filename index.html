@@ -8,30 +8,45 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
       rel="stylesheet"
     />
+    <!-- <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>trillo &mdash; Your all-in-one booking app</title>
-
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__nav">
-        <ul class="header__nav--items">
-          <li class="header__nav--item">
-            <a href="#section--1" class="header__nav--link">Portfolio</a>
-          </li>
-          <li class="header__nav--item">
-            <a href="#section--2" class="header__nav--link">About</a>
-          </li>
-          <li class="header__nav--item">
-            <a href="#section--3" class="header__nav--link">Contact</a>
-          </li>
-        </ul>
+        <nav class="header__nav--all">
+          <ul class="header__nav--items">
+            <li class="header__nav--item">
+              <a href="#section--1" class="header__nav--link">Portfolio</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#section--2" class="header__nav--link">About</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#section--3" class="header__nav--link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- <button class="btn-mobile-nav">
+          <svg class="icon-mobile-nav one">
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="icon-mobile-nav two">
+            <use xlink:href="img/sprite.svg#icon-cross" name="close"></use>
+          </svg>
+        </button> -->
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close"></ion-icon>
+        </button>
       </div>
       <div class="header__image">
         <img

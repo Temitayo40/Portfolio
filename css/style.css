@@ -43,7 +43,8 @@ Grey dark 3: #999
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -60,11 +61,11 @@ body {
   background-position: center;
   position: relative; }
   .header__nav {
-    background-color: transparent;
     position: fixed;
     width: 100%;
     padding: 1rem 0;
-    z-index: 100; }
+    z-index: 1000;
+    display: block; }
     .header__nav--items {
       list-style: none;
       display: flex;
@@ -79,6 +80,8 @@ body {
     .header__nav--link {
       text-decoration: none;
       color: #0c1627; }
+    .header__nav .icon-mobile-nav[name="close"] {
+      display: none; }
   .header .img {
     position: relative;
     top: 50%;
@@ -88,6 +91,7 @@ body {
     margin: 0 auto; }
   .header__textcontent {
     text-align: center;
+    max-width: 62%;
     width: 57%;
     position: absolute;
     top: 25%;
@@ -492,3 +496,59 @@ h3 {
   font-size: 2.4rem;
   font-weight: 500;
   color: #344563; }
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none; }
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #67798e; }
+
+.nav-open .header__nav--all {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0); }
+
+@media (max-width: 59rem) {
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.8rem;
+    position: relative; }
+  .nav-open .icon-mobile-nav[name="close"] {
+    display: block; }
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none; }
+  .header__nav--all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden; }
+  .btn-mobile-nav {
+    display: block;
+    margin-left: auto;
+    z-index: 100; }
+  .header__nav--items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .header__nav--item {
+    font-size: 3rem;
+    gap: 4.8rem; } }
