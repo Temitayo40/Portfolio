@@ -4,6 +4,10 @@
   border-radius: 0.8rem;
   overflow: hidden;
   background-color: var(--color-background-text);
+
+  @include respond(phone) {
+    flex: 1 0 100%;
+  }
 }
 
 @mixin positioncenter {
@@ -11,6 +15,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include respond(phone) {
+  }
 }
 
 @mixin respond($breakpoint) {

@@ -1,6 +1,6 @@
-#section--2 {
-  border: 2px solid red;
-}
+// #section--2 {
+//   border: 2px solid red;
+// }
 
 .section {
   // &:not(:first-child) {
@@ -9,12 +9,28 @@
   transition: all 0.8s;
 }
 
+.aboutme-section {
+  // border: 2px solid green;
+  position: relative;
+  // @include respond(phone) {
+  //   margin-bottom: 10rem;
+  // }
+}
+
 .project-section {
   display: flex;
   flex-direction: column;
   padding: 4rem 0.8rem;
   margin: 0 auto 2rem auto;
   width: 90%;
+
+  @include respond(tab-land) {
+    width: 95%;
+  }
+  @include respond(phone) {
+    width: 95%;
+    margin: 0 auto 8rem auto;
+  }
 }
 
 .contact__section {
@@ -22,10 +38,14 @@
   width: 100%;
 
   .contactme {
-    width: 90%;
+    width: 95%;
     margin: 0 auto 6rem auto;
     display: flex;
     gap: 2rem;
+
+    @include respond(phone) {
+      display: block;
+    }
 
     &__texts {
       font-size: 3rem;
@@ -35,10 +55,18 @@
       text-align: center;
       align-items: center;
       justify-content: center;
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
     }
 
     &_fields {
       flex: 0 0 58%;
+
+      // @include respond(phone) {
+      //   justify-content: center;
+      //   align-items: center;
+      // }
     }
 
     .input-group {
@@ -116,6 +144,9 @@
         position: absolute;
         left: 0;
         top: -20rem;
+        @include respond(phone) {
+          display: none;
+        }
       }
       &--2 {
         position: absolute;

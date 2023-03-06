@@ -45,6 +45,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   overflow-x: hidden; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 53%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -53,6 +59,9 @@ body {
   color: var(--color-text);
   background-color: var(--color-default);
   font-size: 1.6rem; }
+  @media only screen and (max-width: 75em) {
+    body {
+      line-height: 1.6; } }
 
 .header {
   background-color: var(--color-default);
@@ -91,16 +100,29 @@ body {
     margin: 0 auto; }
   .header__textcontent {
     text-align: center;
-    max-width: 62%;
-    width: 57%;
+    width: 62%;
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%, -25%); }
+    transform: translate(-50%, -25%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .header__textcontent {
+        width: 70%;
+        gap: 1rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__textcontent {
+        width: 90%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__textcontent {
+        position: relative; } }
   .header__icons {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 1rem; }
     .header__icons > * {
       padding: 0 2rem; }
     .header__icons-svg {
@@ -122,6 +144,9 @@ body {
     background-color: var(--color-background-text);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: all 0.2s; }
+    @media only screen and (max-width: 37.5em) {
+      .projects_container {
+        flex: 1 0 100%; } }
     .projects_container-img {
       width: 100%;
       height: 25.2rem; }
@@ -141,12 +166,17 @@ body {
 
 .illustration {
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .illustration {
+      margin-bottom: 7rem; } }
   .illustration--image-1 {
-    width: 100%; }
+    width: 100%;
+    z-index: -100; }
   .illustration--image-2 {
     position: absolute;
     top: 50%;
-    left: 0; }
+    left: 0;
+    z-index: -100; }
   .illustration .abs {
     position: relative; }
   .illustration__content {
@@ -154,9 +184,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 62%;
     text-align: center;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 75em) {
+      .illustration__content {
+        width: 95%; } }
+    @media only screen and (max-width: 37.5em) {
+      .illustration__content {
+        margin-bottom: 6rem; } }
 
 .aboutme__tools {
   padding: 4rem 0.8rem;
@@ -164,6 +202,13 @@ body {
   width: 90%;
   display: flex;
   gap: 2.4rem; }
+  @media only screen and (max-width: 75em) {
+    .aboutme__tools {
+      width: 95%; } }
+  @media only screen and (max-width: 37.5em) {
+    .aboutme__tools {
+      margin-bottom: 6rem;
+      flex-direction: column; } }
   .aboutme__tools-container {
     display: flex;
     flex-direction: column;
@@ -176,6 +221,9 @@ body {
     border-radius: 0.8rem;
     transition: all 0.2s ease-out;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 37.5em) {
+      .aboutme__tools-container {
+        flex: 1 0 100%; } }
     .aboutme__tools-container:hover {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
       transform: translateY(-5px); }
@@ -232,11 +280,11 @@ body {
       justify-content: flex-start;
       flex-wrap: wrap; }
 
-#section--2 {
-  border: 2px solid red; }
-
 .section {
   transition: all 0.8s; }
+
+.aboutme-section {
+  position: relative; }
 
 .project-section {
   display: flex;
@@ -244,14 +292,24 @@ body {
   padding: 4rem 0.8rem;
   margin: 0 auto 2rem auto;
   width: 90%; }
+  @media only screen and (max-width: 75em) {
+    .project-section {
+      width: 95%; } }
+  @media only screen and (max-width: 37.5em) {
+    .project-section {
+      width: 95%;
+      margin: 0 auto 8rem auto; } }
 
 .contact__section {
   width: 100%; }
   .contact__section .contactme {
-    width: 90%;
+    width: 95%;
     margin: 0 auto 6rem auto;
     display: flex;
     gap: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__section .contactme {
+        display: block; } }
     .contact__section .contactme__texts {
       font-size: 3rem;
       font-weight: 700;
@@ -260,6 +318,9 @@ body {
       text-align: center;
       align-items: center;
       justify-content: center; }
+      @media only screen and (max-width: 37.5em) {
+        .contact__section .contactme__texts {
+          margin-bottom: 5rem; } }
     .contact__section .contactme_fields {
       flex: 0 0 58%; }
     .contact__section .contactme .input-group {
@@ -315,6 +376,9 @@ body {
       position: absolute;
       left: 0;
       top: -20rem; }
+      @media only screen and (max-width: 37.5em) {
+        .contact__section .background__image--1 {
+          display: none; } }
     .contact__section .background__image--2 {
       position: absolute;
       left: 25%; }
@@ -341,6 +405,12 @@ body {
     font-weight: 700;
     letter-spacing: -0.2rem;
     animation: moveInLeft 1s ease-out; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__primary--main {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        margin: 3.5rem; } }
   .heading__primary--sub {
     display: block;
     font-size: 5rem;
@@ -348,10 +418,16 @@ body {
     color: var(--color-primary);
     margin-top: -2rem;
     animation: moveInRight 1s ease-out; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__primary--sub {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1; } }
 
 .paragraph__text {
   font-size: 2.2rem;
-  color: var(--color-text-2); }
+  color: var(--color-text-2);
+  margin-bottom: 2rem; }
 
 .heading__secondary {
   font-size: 4rem;
@@ -404,9 +480,6 @@ body {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem); }
-
-.margin-bottom-small {
-  margin-bottom: 2.4rem; }
 
 .center {
   align-items: center;
@@ -464,7 +537,8 @@ body {
     border-radius: 0.4rem;
     transition: all 0.2s;
     cursor: pointer;
-    border: none; }
+    border: none;
+    backface-visibility: hidden; }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }

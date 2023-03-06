@@ -1,6 +1,9 @@
 .heading__primary {
   color: var(--color-text-2);
   backface-visibility: hidden;
+  // @include respond(phone) {
+  //   line-height: 1.8;
+  // }
 
   &--main {
     display: block;
@@ -8,6 +11,13 @@
     font-weight: 700;
     letter-spacing: -0.2rem;
     animation: moveInLeft 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      margin: 3.5rem;
+    }
   }
 
   &--sub {
@@ -19,12 +29,19 @@
     // letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out;
     // animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
   }
 }
 
 .paragraph__text {
   font-size: 2.2rem;
   color: var(--color-text-2);
+  margin-bottom: 2rem;
 }
 
 .heading__secondary {

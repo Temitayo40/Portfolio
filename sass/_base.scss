@@ -22,7 +22,7 @@ Grey dark 3: #999
 #DFE1E6
 
 */
-
+@import "./mixins";
 :root {
   --color-background: #e5e5e5;
   --color-text: #172b4d;
@@ -50,6 +50,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10p
   overflow-x: hidden;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 53%; //1 rem = 8px, 8/16 = 50%
+  }
   // scroll-behavior: smooth;
 }
 
@@ -60,5 +70,9 @@ body {
   color: var(--color-text);
   background-color: var(--color-default);
   font-size: 1.6rem;
+
+  @include respond(tab-land) {
+    line-height: 1.6;
+  }
   // width: 100vh;
 }
